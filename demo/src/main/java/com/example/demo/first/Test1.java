@@ -1,5 +1,7 @@
 package com.example.demo.first;
 
+import org.junit.Test;
+
 /**
  * FileName: Test1
  * Author:   SunEee
@@ -9,9 +11,7 @@ package com.example.demo.first;
 
 public class Test1{
 
-
-
-
+    @Test
     public void test1() {
 
     }
