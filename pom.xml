@@ -50,6 +50,6 @@
     </build>
 
     <modules>
-        <module>demo</module>
+        <module>chapter-one</module>
     </modules>
 </project>
