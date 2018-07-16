@@ -16,8 +16,8 @@ public class Run1 {
 
             System.out.println("线程是否停止？" + t.isInterrupted());
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (InterruptedException e) {
+            System.out.println("线程睡眠异常" + e.getMessage());
         }
         System.out.println("end");
     }
