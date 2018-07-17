@@ -51,5 +51,6 @@
 
     <modules>
         <module>chapter-one</module>
+        <module>chapter-two</module>
     </modules>
 </project>
