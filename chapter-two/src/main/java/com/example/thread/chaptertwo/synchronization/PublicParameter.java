@@ -18,14 +18,14 @@ public class PublicParameter {
             this.password = password;
             System.out.println("当前线程名字为：" + Thread.currentThread().getName() +  ",username='" + username + '\'' +
                     ", password='" + password + '\'' );
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             System.out.println("end");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public void getValue() {
+    public synchronized void getValue() {
         System.out.println("当前线程名字为：" + Thread.currentThread().getName() +  ",username='" + username + '\'' +
                 ", password='" + password + '\'' );
     }

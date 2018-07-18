@@ -17,6 +17,7 @@ public class MyTheadB extends Thread {
     @Override
     public void run() {
         super.run();
-        parameter.setValue("B","123456");
+        //parameter.setValue("B","123456");
+        parameter.getValue();
     }
 }
