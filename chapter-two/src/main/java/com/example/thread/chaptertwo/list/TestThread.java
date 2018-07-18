@@ -7,12 +7,15 @@ package com.example.thread.chaptertwo.list;
  * Description: 测试线程
  */
 public class TestThread {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         MyList myList = new MyList();
         ThreadA a = new ThreadA("A",myList);
         ThreadB b = new ThreadB("b",myList);
 
         a.start();
         b.start();
+
+        Thread.sleep(3000);
+        System.out.println( myList.getSize()); //确定list只有1个值
     }
 }

@@ -18,8 +18,12 @@ public class ThreadB extends Thread {
     @Override
     public void run() {
         super.run();
+        /*//证明线程调用方法是无序的
         for (int i = 0; i < 10000; i++) {
-            list.add("ThreadA" + i);
-        }
+            list.add("ThreadA"+ i);
+        }*/
+
+        ListServer listServer = new ListServer();
+        listServer.listServer(list,"B");
     }
 }
