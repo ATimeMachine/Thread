@@ -10,7 +10,8 @@ public class ThreadB extends Thread {
 
     private MyList list;
 
-    public ThreadB(MyList list) {
+    public ThreadB(String name, MyList list) {
+        super(name);
         this.list = list;
     }
 

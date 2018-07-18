@@ -9,7 +9,8 @@ package com.example.thread.chaptertwo.list;
 public class ThreadA extends Thread {
     private MyList list;
 
-    public ThreadA(MyList list) {
+    public ThreadA(String name, MyList list) {
+        super(name);
         this.list = list;
     }
 

@@ -9,10 +9,8 @@ package com.example.thread.chaptertwo.list;
 public class TestThread {
     public static void main(String[] args) {
         MyList myList = new MyList();
-        ThreadA a = new ThreadA(myList);
-        a.setName("A");
-        ThreadB b = new ThreadB(myList);
-        b.setName("b");
+        ThreadA a = new ThreadA("A",myList);
+        ThreadB b = new ThreadB("b",myList);
 
         a.start();
         b.start();
