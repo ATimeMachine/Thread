@@ -14,6 +14,7 @@ public class PublicParameter {
 
     public synchronized void setValue(String username, String password) {
         try {
+            Thread.sleep(1000);
             this.username = username;
             this.password = password;
             System.out.println("当前线程名字为：" + Thread.currentThread().getName() +  ",username='" + username + '\'' +
