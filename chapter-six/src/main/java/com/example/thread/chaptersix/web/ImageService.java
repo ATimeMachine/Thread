@@ -17,6 +17,7 @@ public class ImageService {
 
     private void delay(String area) {
         try {
+            //Thread.sleep(1000);
             Random random = new Random();
             int i = random.nextInt(2000) + 500;
             System.out.println(area + "--" + i);

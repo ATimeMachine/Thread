@@ -27,11 +27,11 @@ public class WebHtmlController {
         });
     }
 
-    public void getWebHtml() throws ExecutionException, InterruptedException {
+    public void getWebHtml(){
         ImageService imageService = new ImageService();
         long start = System.currentTimeMillis();
-        CompletableFuture[] futures = areas.stream().map(area -> CompletableFuture.supplyAsync(() -> WrittenWordsService.getNews(area))
-                .thenCombine(CompletableFuture.supplyAsync(() -> imageService.getImage(area)), WebHtml::new))
+        CompletableFuture[] futures = areas.stream().map(area -> CompletableFuture.supplyAsync(() -> WrittenWordsService.getNews(area),executor)
+                .thenCombine(CompletableFuture.supplyAsync(() -> imageService.getImage(area),executor), WebHtml::new))
                 .map(f -> f.thenAccept(webHtml -> printTime(webHtml,start)))
                 .toArray(CompletableFuture[]::new);
 

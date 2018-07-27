@@ -2,7 +2,6 @@ package com.example.thread.chaptersix.web;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 /**
  * FileName: WebHtmlTest
@@ -12,8 +11,8 @@ import java.util.concurrent.ExecutionException;
  */
 public class WebHtmlTest {
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        List<String> strings = Arrays.asList("a", "b", "c", "d");
+    public static void main(String[] args){
+        List<String> strings = Arrays.asList("a", "b", "c", "d","e","f","g");
 
         WebHtmlController webHtmlController = new WebHtmlController(strings);
         webHtmlController.getWebHtml();
