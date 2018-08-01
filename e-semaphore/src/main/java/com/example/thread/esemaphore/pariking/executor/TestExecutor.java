@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadFactory;
  */
 public class TestExecutor {
     public static void main(String[] args) {
-        testExecutor();
+        testExecutor();//没有结果
     }
 
     public static void testExecutor() {
